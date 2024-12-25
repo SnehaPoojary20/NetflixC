@@ -1,17 +1,22 @@
 const express = require('express');
+const path = require('path');
+const ejsLayouts = require('express-ejs-layouts'); // Import the package
+
 const app = express();
 
-// Middleware
-app.set('view engine', 'ejs'); // Set EJS as the view engine
-app.set('views', './views');   // Views directory
-app.use(express.static('public')); // Serve static files
+// Set up view engine and layouts
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(ejsLayouts); // Use the express-ejs-layouts middleware
 
-// Routes
-const homeRouter = require('./routes/home');
-app.use('/', homeRouter);
+app.use(express.static('public')); // Serve static files like CSS, images, etc.
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+// Define routes
+app.get('/', (req, res) => {
+    res.render('index.ejs');
 });
+
+app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000');
+});
+
