@@ -1,6 +1,4 @@
-
-   
-        <div class="header">
+    <div class="header">
             <nav>
                
                 <img src="/Images/logo.png" class="logo" alt="Logo">
@@ -46,17 +44,37 @@
                 </button>
             </div>
             <br>
-            <div class="top">
-                <!-- <div><i class="fa-thin fa-angle-left"></i></div> -->
-                <div class="card" style="width: 18rem;">
-                    <img src="../public/Images/image1.jpeg" class="card-img-top" alt="top_image" style="width: 20 rem;"></div>
-                    <div class="card-img-overlay"></div>
-                    <div class="card-body">
-                    <div class="card-body">
-                     <a href="#" class="btn btn-primary">Recently added</a>
+            <div class="container horizontal-scroll">
+                
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                    <div class="horizontal-scroll">
+<%const movies = [
+                      { title: "Movie 1", imgSrc: "/Images/image1.jpeg" },
+                      { title: "Movie 2", imgSrc: "/images/image8.jpg" },
+                      { title: "Movie 3", imgSrc: "/images/image9.avif" },
+                      { title: "Movie 4", imgSrc: "/images/images5.avif" },
+                      { title: "Movie 5", imgSrc: "/images/images.jpeg" },
+                      { title: "Movie 6", imgSrc: "/Images/images7.webp" },
+                      { title: "Movie 7", imgSrc: "/images/images (2).jpeg" },
+                      { title: "Movie 8", imgSrc: "/images/image10.jpg" },
+                      { title: "Movie 9", imgSrc: "/images/image6.jpg" },
+                      { title: "Movie 10", imgSrc: "/images/images (3).jpeg" }
+                    ]; %>
                     </div>
+                    <% movies.forEach(movie => { %>
+                    <div class="col">
+                      <div class="card">
+                        <img src="<%= movie.imgSrc %>" class="card-img-top" alt="<%= movie.title %>">
+                        <div class="card-body">
+                          <h5 class="card-title">Recently added</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <% }); %>
                   </div>
-            </div>
+              
+              </div>
+            
         </div>
 
         
@@ -64,4 +82,4 @@
         
       
 
-   
+        

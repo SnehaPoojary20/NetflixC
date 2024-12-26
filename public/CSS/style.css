@@ -119,6 +119,8 @@ nav button{
     /* background: #000; */
     color: #fff;
     font-weight: 400;
+    margin: 20px 0;
+      
 }
 
 .trending-btn{
@@ -135,7 +137,51 @@ nav button{
 .top{
     color: #fff;
 }
-
-.card-img-top{
-    background-image: url(./Images/images1.jpeg);
+.card{
+    width: 170px;
+    background-color: #2c2c2c;
+    border: none;
+    
 }
+.card img {
+    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+    
+  }
+
+  .card-title {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* Horizontal Scroll Styling */
+  .horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #6b6b6b transparent;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #6b6b6b;
+    border-radius: 5px;
+  }
+
+  .horizontal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .horizontal-scroll .card {
+    margin-right: 10px;
+    flex: 0 0 auto;
+    width: 150px;
+  }
+
+  
+
