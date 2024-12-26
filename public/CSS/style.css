@@ -31,6 +31,7 @@ nav{
 .logo{
     width: 150px;
     cursor: pointer;
+    
 }
 
 nav button{
@@ -39,4 +40,102 @@ nav button{
     background:#db0001;
     color: #fff;
     padding: 7px 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lang-btn{
+    display:inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+   
+}
+
+.down{
+    width: 10px;
+    height: 5px;
+    margin-left: 10px;
+}
+
+.header-contents{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.header-contents h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-contents h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+    
+}
+
+.email input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email button{
+    background:#db0001 ;
+    border: 0;
+    outline: 0;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+.features{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../Images/background.jpg) ;
+    padding: 10px 8%;
+}
+
+.trending{
+    /* background: #000; */
+    color: #fff;
+    font-weight: 400;
+}
+
+.trending-btn{
+    display:inline-flex;
+    align-items: center;
+    background: transparent;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.top{
+    color: #fff;
+}
+
+.card-img-top{
+    background-image: url(./Images/images1.jpeg);
 }
